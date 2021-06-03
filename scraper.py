@@ -4,7 +4,7 @@ import io
 import requests
 from PIL import Image
 import hashlib
-from selenium import webdriver 
+from selenium import webdriver
 
 def fetch_image_urls(query:str, max_links_to_fetch:int, wd:webdriver, sleep_between_interactions:int=1):
     def scroll_to_end(wd):
@@ -89,15 +89,8 @@ def search_and_download(search_term:str,driver_path:str,target_path='./images',n
         
     for elem in res:
         persist_image(target_folder,elem)
+    
+    
 
 
 
-# This is the path I use
-# DRIVER_PATH = '.../Desktop/Scraping/chromedriver 2'
-# Put the path for your ChromeDriver here
-DRIVER_PATH = '/Users/will.dunlap/Documents/image_recog/chrome_driver/chromedriver'
-wd = webdriver.Chrome(executable_path=DRIVER_PATH)
-
-search_term = 'Dog'
-
-search_and_download(search_term=search_term, driver_path=DRIVER_PATH)
