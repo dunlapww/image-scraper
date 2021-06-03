@@ -12,7 +12,15 @@ def fetch_image_urls(query:str, max_links_to_fetch:int, wd:webdriver, sleep_betw
         time.sleep(sleep_between_interactions)    
     
     # build the google query
-    search_url = "https://www.google.com/search?safe=off&site=&tbm=isch&source=hp&q={q}&oq={q}&gs_l=img"
+    
+    #standard google image search
+    #search_url = "https://www.google.com/search?safe=off&site=&tbm=isch&source=hp&q={q}&oq={q}&gs_l=img"
+    
+    #color photo only jpg search (advanced image search)
+    #search_url = "https://www.google.com/search?as_st=y&tbm=isch&hl=en&as_q={q}&as_epq=&as_oq=&as_eq=&cr=&as_sitesearch=&safe=images&tbs=itp:photo,ift:jpg"
+
+    #b&w photo only jpg search (advanced image search)
+    search_url = "https://www.google.com/search?as_st=y&tbm=isch&hl=en&as_q={q}&as_epq=&as_oq=&as_eq=&cr=&as_sitesearch=&safe=images&tbs=itp:photo,ic:gray,ift:jpg"
 
     # load the page
     wd.get(search_url.format(q=query))

@@ -12,8 +12,8 @@ from scraper import search_and_download
 
 DRIVER_PATH = '/Users/will.dunlap/Documents/image_recog/chrome_driver/chromedriver'
 
-search_term = 'fluffy dog'
+search_term = 'colorado wilderness'
 target_path='./images'
-number_images = 3
+number_images = 150
 
 search_and_download(search_term=search_term, driver_path=DRIVER_PATH, target_path=target_path, number_images=number_images)
