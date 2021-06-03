@@ -17,5 +17,3 @@ target_path='./images'
 number_images = 3
 
 search_and_download(search_term=search_term, driver_path=DRIVER_PATH, target_path=target_path, number_images=number_images)
-
-#wd.quit()
